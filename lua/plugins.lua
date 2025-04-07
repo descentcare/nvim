@@ -2,9 +2,21 @@ return {
     {
         "folke/snacks.nvim",
         -- @type snacks.Config
-        opt = {
-            picker = {},
+        opts = {
+            picker = {
+                prompt = "/",
+                layout = {
+                    preset = "dropdown",
+                    fullscreen = true,
+                }
+            },
             lazygit = {},
+            indent = {
+                enabled = true,
+                chunk = {
+                    enabled = true,
+                },
+            },
             toggle = {},
         },
         keys = {
@@ -38,7 +50,6 @@ return {
             { "<leader>lg", function() require("snacks").lazygit() end, desc = "Open lazygit" },
             -- Explorer
             { "<leader>e", function() require("snacks").picker.explorer({
-                layout = { preview = true },
                 win = {
                     list = {
                         keys = {
