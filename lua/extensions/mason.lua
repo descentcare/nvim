@@ -4,7 +4,7 @@ mason.setup({
     PATH = "prepend",
     registries = {
         'github:mason-org/mason-registry',
-        'github:crashdummyy/mason-registry',
+        'github:Crashdummyy/mason-registry',
     },
 })
 local mason_lspconfig = require("mason-lspconfig")
