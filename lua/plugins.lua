@@ -5,11 +5,15 @@ return {
         opts = {
             picker = {
                 -- prompt = "/",
-                -- layout = {
-                    -- preset = "dropdown",
-                    -- fullscreen = true,
-                -- }
+                layout = {
+                    preset = "dropdown",
+                    --layout = {
+                        --width = 0.99,
+                        --height = 0.95,
+                    --},
+                }
             },
+            explorer = {},
             lazygit = {},
             indent = {
                 enabled = true,
@@ -50,13 +54,22 @@ return {
             { "<leader>lg", function() require("snacks").lazygit() end, desc = "Open lazygit" },
             -- Explorer
             { "<leader>e", function() require("snacks").picker.explorer({
-                win = {
-                    list = {
-                        keys = {
+                opts = {
+                    layout = {
+                        preset = "sidebar", preview = false,
+                        width = 0.3,
+                        layout = {
+                            width = 0.3,
+                        }
+                    },
+                    win = {
+                        list = {
+                            keys = {
 
+                            },
                         },
                     },
-                },
+                }
             }) end, desc = "File Explorer" },
         },
     },
@@ -175,4 +188,11 @@ return {
             }
         end,
     },
+    {
+        "cohama/lexima.vim",
+    },
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
+    }
 }
