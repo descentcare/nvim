@@ -7,4 +7,6 @@ local lazy = require("lazy")
 lazy.setup("plugins")
 
 require("keymaps")
-require("pluginconfigs")
+require("tm.diagnostics")
+require("tm.indent")
+require("tm.lualine")

@@ -4,13 +4,12 @@ return {
         -- @type snacks.Config
         opts = {
             picker = {
-                -- prompt = "/",
                 layout = {
                     preset = "dropdown",
-                    --layout = {
-                        --width = 0.99,
-                        --height = 0.95,
-                    --},
+                    layout = {
+                        width = 0.99,
+                        height = 0.92,
+                    },
                 }
             },
             explorer = {},
@@ -54,12 +53,10 @@ return {
             { "<leader>lg", function() require("snacks").lazygit() end, desc = "Open lazygit" },
             -- Explorer
             { "<leader>e", function() require("snacks").picker.explorer({
-                opts = {
                     layout = {
                         preset = "sidebar", preview = false,
-                        width = 0.3,
                         layout = {
-                            width = 0.3,
+                            width = 0.2,
                         }
                     },
                     win = {
@@ -69,7 +66,6 @@ return {
                             },
                         },
                     },
-                }
             }) end, desc = "File Explorer" },
         },
     },

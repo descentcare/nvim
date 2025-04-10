@@ -4,5 +4,5 @@ map("n", "<leader>ca", function ()
 end)
 
 -- easy-dotnet
-dotnet = require("easy-dotnet")
+--local dotnet = require("easy-dotnet")
 map("n", "<leader>dd", function() vim.cmd[[Dotnet]] end)
