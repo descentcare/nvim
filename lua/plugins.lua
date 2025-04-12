@@ -109,6 +109,9 @@ return {
         dependencies = { "rafamadriz/friendly-snippets" },
         version = "1.*",
         opts = {
+            cmdline = {
+                enabled = true,
+            },
             keymap = {
                 preset = "default",
                 ['<C-u>'] = { "accept" },
@@ -140,9 +143,15 @@ return {
         "folke/tokyonight.nvim",
         lazy = false,
         priority = 1000,
-        config = function ()
-            vim.cmd.colorscheme("tokyonight")
-        end
+    },
+    {
+        "ellisonleao/gruvbox.nvim",
+    },
+    {
+        "RomanAverin/charleston.nvim",
+        opts = {
+            darken_background = true,
+        },
     },
     -- lazy.nvim
     {
@@ -178,6 +187,12 @@ return {
                         },
                         ["csharp|code_lens"] = {
                             dotnet_enable_references_code_lens = true,
+                        },
+                        ["csharp|completion"] = {
+                            dotnet_show_completion_items_from_unimported_namespaces = true,
+                        },
+                        ["csharp|formating"] = {
+                            dotnet_organize_imports_on_format = true,
                         },
                     },
                 },
