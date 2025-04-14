@@ -110,7 +110,7 @@ return {
         version = "1.*",
         opts = {
             cmdline = {
-                enabled = true,
+                enabled = false,
             },
             keymap = {
                 preset = "default",
