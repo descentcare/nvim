@@ -114,7 +114,7 @@ return {
             },
             keymap = {
                 preset = "default",
-                ['<C-u>'] = { "accept" },
+                ["<C-u>"] = { "accept" },
             },
 
             appearance = {
@@ -203,7 +203,14 @@ return {
         "cohama/lexima.vim",
     },
     {
-        'nvim-lualine/lualine.nvim',
-        dependencies = { 'nvim-tree/nvim-web-devicons' }
-    }
+        "nvim-lualine/lualine.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" }
+    },
+    {
+        "MeanderingProgrammer/render-markdown.nvim",
+        dependencies = { "nvim-treesitter", "nvim-tree/nvim-web-devicons" },
+        config = function ()
+            require("extensions.render-markdown")
+        end,
+    },
 }
