@@ -54,9 +54,6 @@ vim.opt.wildmode = "longest:full,full"
 -- Encoding {{{
 vim.opt.encoding = 'utf-8'
 -- }}}
--- Terminal {{{
-vim.o.shell = "powershell"
--- }}}
 
 -- Default Plugins {{{
 local disabled_built_ins = {
