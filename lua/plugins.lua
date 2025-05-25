@@ -69,8 +69,10 @@ return {
             }) end, desc = "File Explorer" },
         },
     },
+    --[[
     {
         "williamboman/mason.nvim",
+        enabled = false,
         build = ":MasonUpdate",
         dependencies = {
             "williamboman/mason-lspconfig.nvim",
@@ -79,6 +81,10 @@ return {
         config = function()
             require "extensions.mason"
         end
+    },
+    ]]
+    {
+        "neovim/nvim-lspconfig",
     },
     {
         "lewis6991/gitsigns.nvim",
@@ -156,11 +162,13 @@ return {
     -- lazy.nvim
     {
         "GustavEikaas/easy-dotnet.nvim",
+        enabled = false,
         dependencies = { "nvim-lua/plenary.nvim", "folke/snacks.nvim", },
         config = function()
             require("easy-dotnet").setup()
         end
     },
+    --[[
     {
         "seblj/roslyn.nvim",
         config = function()
@@ -199,6 +207,7 @@ return {
             }
         end,
     },
+    ]]
     {
         "cohama/lexima.vim",
     },
@@ -212,5 +221,12 @@ return {
         config = function ()
             require("extensions.render-markdown")
         end,
+    },
+    {
+        "ibhagwan/fzf-lua",
+        -- optional for icon support
+        config = function()
+            -- require "extensions.fzf"
+        end
     },
 }

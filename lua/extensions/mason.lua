@@ -11,7 +11,7 @@ local mason_lspconfig = require("mason-lspconfig")
 local lspconfig = require("lspconfig")
 mason_lspconfig.setup({
     ensure_installed = {
-        "lua_ls",             -- LSP for Lua language
+        -- "lua_ls",             -- LSP for Lua language
   }
 });
 
