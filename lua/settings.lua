@@ -29,7 +29,8 @@ vim.opt.fixeol = false -- Turn off appending new line in the end of a file
 -- }}}
 
 -- Folding {{{
-vim.opt.foldmethod = 'syntax'
+vim.opt.foldmethod = 'manual'
+vim.opt.fdls = 99
 -- }}}
 
 -- Search {{{

@@ -53,19 +53,19 @@ return {
             { "<leader>lg", function() require("snacks").lazygit() end, desc = "Open lazygit" },
             -- Explorer
             { "<leader>e", function() require("snacks").picker.explorer({
+                layout = {
+                    preset = "sidebar", preview = false,
                     layout = {
-                        preset = "sidebar", preview = false,
-                        layout = {
-                            width = 0.2,
-                        }
-                    },
-                    win = {
-                        list = {
-                            keys = {
+                        width = 0.2,
+                    }
+                },
+                win = {
+                    list = {
+                        keys = {
 
-                            },
                         },
                     },
+                },
             }) end, desc = "File Explorer" },
         },
     },
@@ -120,7 +120,9 @@ return {
             },
             keymap = {
                 preset = "default",
-                ["<C-u>"] = { "accept" },
+                ["<C-f>"] = { "accept" },
+                ["<C-u>"] = { "scroll_documentation_up" },
+                ["<C-d>"] = { "scroll_documentation_down" },
             },
 
             appearance = {
